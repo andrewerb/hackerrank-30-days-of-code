@@ -1,3 +1,21 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# Junk folders that I tend to leave in my projects #
+#######################
+junk
+scratch
+
+# Github generated gitignore criteria for Python projects #
+#######################
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
