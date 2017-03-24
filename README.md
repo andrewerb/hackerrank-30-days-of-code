@@ -1,3 +1,3 @@
-HackerRank 30 days of Code challenges
+Solutions to HackerRank's 30 Days of Code challenges
+Good practice exercises!
 
-Andrew Erb
