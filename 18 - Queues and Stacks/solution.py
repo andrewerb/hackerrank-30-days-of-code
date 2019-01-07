@@ -1,8 +1,14 @@
-"""Day 18: Queues and Stacks"""
+"""Day 18: Queues and Stacks
+"""
 
 import sys
 
 class Solution:
+    """ Take a string s. Enqueue s into a queue and push s into a stack.
+        If both match up when popped, then s is a palindrome.
+
+        Not bothering to type check/cast for this implementation.
+    """
     # Write your code here
     def __init__(self):
         self.stack = None
@@ -20,8 +26,10 @@ class Solution:
     def dequeueCharacter(self):
         pass
 
+    # end of custom code
+###########################################
 
-    # read the string s
+# read the string s
 s = input()
 #Create the Solution class object
 obj = Solution()
