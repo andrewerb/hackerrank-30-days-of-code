@@ -6,9 +6,20 @@ class AdvancedArithmetic(object):
         raise NotImplementedError
 
 
-class Calculator(AdvancedArithmetic):
+class Calculator(AdvancedArithmetic): #custom class
     def divisorSum(self, n):
-        pass
+        # sum of all divisors of n
+        divisor_list = list()
+        for divisor in range(1, n): #(range from 1 to n-1)
+            if n % divisor == 0:
+                divisor_list.append(divisor)
+        
+        divisor_sum = n
+        for item in divisor_list:
+            divisor_sum += item
+        #print (str(divisor_list))
+        return divisor_sum
+            
 
 
 n = int(input())
