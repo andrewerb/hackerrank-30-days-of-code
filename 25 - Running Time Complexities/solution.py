@@ -7,21 +7,30 @@ import sys
 import math
 
 
+def check_prime(num):
+    """ Returns 'Prime' or 'Not prime' for a given positive int.
+    """
+    if num == 2:  # Allows us to check for n%2 below, and check less in range iterator
+        return("Prime")
+    if num == 1 or num % 2 == 0:  # 1 is not a prime, nor are even numbers above 2
+        return("Not prime")
+
+    sq = int(math.sqrt(num))
+    for d in range(3, sq+1, 2):  # start at 3, skip by all even #s
+        # A prime int n >1 will have a divisor between 2 and sqrt(n)
+        if num % d == 0:
+            return("Not prime")
+
+    return("Prime")
+
+
 T = int(input().strip())
 n_list = []
 for _ in range(0, T):
     n_list.append(int(input()))
+output = []
 
-for i, n in enumerate(n_list):
-    if n == 1:
-        sys.stdout.write("Not prime")
-    else:
-        for divisor in range(2, int(math.sqrt(n))+1):
-            # A prime int n >1 will have a divisor between 2 and sqrt(n)
-            if n % divisor == 0:
-                sys.stdout.write("Not prime")
-                break
-        else:
-            sys.stdout.write("Prime")
-        if i != T-1:
-            sys.stdout.write("\n")
+for n in n_list:
+    output.append(check_prime(n))
+sys.stdout.write('\n'.join(output))
+#print(*n_list, sep='\n')
